@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
         myWebView.getSettings().setAllowUniversalAccessFromFileURLs(true);
         myWebView.getSettings().setLoadsImagesAutomatically(true);
         myWebView.getSettings().setGeolocationEnabled(true);
+        myWebView.getSettings().setSupportZoom(true);
+        myWebView.getSettings().setDisplayZoomControls(false);
+        myWebView.getSettings().setBuiltInZoomControls(true);
         myWebView.getSettings().setUserAgentString(new WebView(this).getSettings().getUserAgentString());
 
         myWebView.setWebChromeClient(new WebChromeClient() {
@@ -173,6 +176,6 @@ public class MainActivity extends AppCompatActivity {
                     alertDialog();
                 }
             }
-        }, 5000);
+        }, 3000);
     }
 }
